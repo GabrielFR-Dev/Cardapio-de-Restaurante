@@ -28,10 +28,41 @@ export default function Home() {
     setTextoBuscaDigitado("");
     setDadosFiltrados(filtrarProdutos(categoria));
   };
-  
+
   return (
-    <div>
- 
-    </div>
+    <>
+      <header className={estilos.estilos.topo}>
+        <Image src={Banner} alt="banner"/>
+        <div>
+          <h1>
+            RESTAURANT
+          </h1>
+          <p>
+            De pratos clássicos a criações surpreendentes, nosso cardápio é um requinte de sabores refinados.
+          </p>
+        </div>
+      </header>
+      <main className={estilos.container_principal}>
+        <Categorias 
+          handleFiltro={handleFiltro}
+          botaoClicado={botaoClicado}
+        />
+
+        <CampoDeBusca
+          textoBuscaDigitado={textoBuscaDigitado}
+          HandleBusca={HandleBusca}
+        />
+
+        <section className={estilos.secao_cards}>
+          <h2>Cardápio</h2>
+          <div className={estilos.container_cards}>
+            {dadosFiltrados.map((produto) => (
+              <Cards key={produto.id} produto={produto} />
+            ))}
+          </div>
+        </section>
+      </main>
+    
+    </>
   );
 }
