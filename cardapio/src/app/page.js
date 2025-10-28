@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <>
-      <header className={estilos.estilos.topo}>
+      <header className={estilos.estilos_topo}>
         <Image src={Banner} alt="banner"/>
         <div>
           <h1>
