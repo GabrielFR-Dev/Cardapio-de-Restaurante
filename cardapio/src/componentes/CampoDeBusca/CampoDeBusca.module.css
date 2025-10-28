@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  border: 2px solid #f3f3f3;
+  border-radius: 20px;
+}
+
+.container:hover {
+  border: 2px solid goldenrod;
+}
+
+.icone {
+  width: 30px;
+  height: auto;
+}
+
+.container input {
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  outline-style: none;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: goldenrod;
+}
+
+.container input::placeholder {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 425px) {
+  .container input::placeholder {
+    font-size: 12px;
+  }
+}
